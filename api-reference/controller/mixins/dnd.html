@@ -127,8 +127,7 @@
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">async_get_dnd_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DNDMode</span></span></span><a class="headerlink" href="#meross_iot.controller.mixins.dnd.SystemDndMixin.async_get_dnd_mode" title="Permalink to this definition"></a></dt>
 <dd><p>Polls the device and retrieves its DO-NOT-DISTURB mode.
 This method will actually refresh the cached DNDMode by issuing a MQTT message to the broker.
-You should avoid using this method when not strictly needed and rely on the cached DNDMode available
-via <cite>get_dnd_mode()</cite>.
+You should avoid using this method when not strictly needed and cache the retrieved DND mode.
 :param timeout:
 :param args:
 :param kwargs:
